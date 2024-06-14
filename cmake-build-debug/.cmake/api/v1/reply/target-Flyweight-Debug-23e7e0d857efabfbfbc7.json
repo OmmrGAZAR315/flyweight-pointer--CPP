@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "untitled1.exe"
+			"path" : "Flyweight.exe"
 		},
 		{
-			"path" : "untitled1.pdb"
+			"path" : "Flyweight.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "untitled1::@6890427a1f51a3e7e1df",
+	"id" : "Flyweight::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "untitled1",
-	"nameOnDisk" : "untitled1.exe",
+	"name" : "Flyweight",
+	"nameOnDisk" : "Flyweight.exe",
 	"paths" : 
 	{
 		"build" : ".",

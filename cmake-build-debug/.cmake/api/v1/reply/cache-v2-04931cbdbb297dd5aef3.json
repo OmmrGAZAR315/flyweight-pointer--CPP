@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/omara/CLionProjects/untitled1/cmake-build-debug"
+			"value" : "c:/Users/omara/CLionProjects/Flyweight/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/omara/CLionProjects/untitled1/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/omara/CLionProjects/Flyweight/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/omara/CLionProjects/untitled1"
+			"value" : "C:/Users/omara/CLionProjects/Flyweight"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/untitled1"
+			"value" : "C:/Program Files (x86)/Flyweight"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "untitled1"
+			"value" : "Flyweight"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1270,19 +1270,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "linker supports push/pop state"
-				}
-			],
-			"type" : "INTERNAL",
-			"value" : "TRUE"
-		},
-		{
-			"name" : "untitled1_BINARY_DIR",
+			"name" : "Flyweight_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1291,10 +1279,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/omara/CLionProjects/untitled1/cmake-build-debug"
+			"value" : "C:/Users/omara/CLionProjects/Flyweight/cmake-build-debug"
 		},
 		{
-			"name" : "untitled1_IS_TOP_LEVEL",
+			"name" : "Flyweight_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1306,7 +1294,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "untitled1_SOURCE_DIR",
+			"name" : "Flyweight_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1315,7 +1303,19 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/omara/CLionProjects/untitled1"
+			"value" : "C:/Users/omara/CLionProjects/Flyweight"
+		},
+		{
+			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "linker supports push/pop state"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "TRUE"
 		}
 	],
 	"kind" : "cache",
