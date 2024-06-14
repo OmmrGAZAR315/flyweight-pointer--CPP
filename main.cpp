@@ -3,20 +3,6 @@
 #include <vector>
 
 using namespace std;
-//
-//class Bullet {
-//public:
-//    string name;
-//    double damage;
-//    string weapon;
-//    double x;
-//    double y;
-//
-//    Bullet(string name, double damage, string weapon, double x, double y) :
-//            name(std::move(name)), damage(damage), weapon(std::move(weapon)), x(x), y(y) {}
-//
-//};
-
 
 class BulletType {
 public:
@@ -30,13 +16,12 @@ public:
 
 };
 
-class Bullet ;
-
 class BulletFactory {
 public:
     static std::vector<BulletType> bullets;
+    static int x;
 
-    static BulletType& getBulletType(string name, double damage, string weapon) {
+    static BulletType &getBulletType(const string &name, double damage, const string &weapon) {
         for (const auto &bullet: bullets) {
             if (bullet.name == name)
                 return const_cast<BulletType &>(bullet);
@@ -44,45 +29,57 @@ public:
         return bullets.emplace_back(name, damage, weapon);
     }
 };
+
 class Bullet {
+public:
+    string name;
+    double damage;
+    string weapon;
+    double x;
+    double y;
+
+    Bullet(string name, double damage, string weapon, double x, double y) :
+            name(std::move(name)), damage(damage), weapon(std::move(weapon)), x(x), y(y) {}
+
+};
+
+class Bullet2 {
 public:
     double x;
     double y;
     string type;
     BulletType *bulletType;
 
-
-    Bullet(double x, double y, string type, string const &name, double damage, string const &weapon) {
-        this->x = x;
-        this->y = y;
-        this->type = std::move(type);
+    Bullet2(double x, double y, string type, string const &name, double damage, string const &weapon)
+            : x(x), y(y), type(std::move(type)) {
         this->bulletType = &BulletFactory::getBulletType(name, damage, weapon);
     }
 
-    static void draw() {
-        cout << "Bullet" << endl;
-    }
-
 };
+
 std::vector<BulletType> BulletFactory::bullets;
 
 int main() {
+
     array<Bullet, 4> bullets = {
-            Bullet(0, 0, "pistol", "pistol", 10, "pistol"),
-            Bullet(0, 0, "shotgun", "pistol", 10, "pistol"),
-            Bullet(0, 0, "pistol", "pistol", 10, "pistol"),
-            Bullet(0, 0, "pistol", "pistol", 10, "pistol"),
+            Bullet("pistol", 10.45, "pistol", 10, 10),
+            Bullet("pistol", 10.45, "pistol", 10, 10),
+            Bullet("pistol", 10.45, "pistol", 10, 10),
+            Bullet("pistol", 10.45, "pistol", 10, 10),
     };
 
-//    array<Bullet, 4> bullets = {
-//            Bullet("pistol", 10.45,"pistol", 10, 10),
-//            Bullet("pistol", 10.45,"pistol", 10, 10),
-//            Bullet("pistol", 10.45,"pistol", 10, 10),
-//            Bullet("pistol", 10.45,"pistol", 10, 10),
-//
-//    };
-    Bullet x = bullets[0];
-    cout << sizeof(x) << endl;
-    cout << sizeof(bullets) << endl;
+    array<Bullet2, 4> bullets2 = {
+            Bullet2(0, 0, "pistol", "pistol", 10, "pistol"),
+            Bullet2(0, 0, "shotgun", "pistol", 10, "pistol"),
+            Bullet2(0, 0, "pistol", "pistol", 10, "pistol"),
+            Bullet2(0, 0, "pistol", "pistol", 10, "pistol"),
+    };
+    cout << ".....Flyweight Design Pattern.....\n\n";
+    cout << "----Without using pointer in Bullet class\n";
+    cout << "Size of one element " << sizeof(bullets[0]) << " Bytes" << endl;
+    cout << "Size of all elements " << sizeof(bullets) << " Bytes\n" << endl;
+    cout << "----With using pointer in Bullet class\n";
+    cout << "Size of one element " << sizeof(bullets2[0]) << " Bytes" << endl;
+    cout << "Size of all elements " << sizeof(bullets2) << " Bytes" << endl;
     return 0;
 }
